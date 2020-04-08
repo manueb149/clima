@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Error from './Error';
 import PropTypes from 'prop-types';
 
 const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
@@ -35,7 +36,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
             onSubmit={handleSubmit}
         >
             {error
-                ? <p className="red darken-4 error">Todos los campos son obligatorios</p>
+                ? <Error error='Ambos campos son obligatorios' />
                 : null
             }
             <div className="input-field col s12">
